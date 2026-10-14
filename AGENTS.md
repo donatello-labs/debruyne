@@ -57,7 +57,9 @@ Repeat the same pattern for: education, languages, location, orientation skip, p
 
 ## Extending capabilities
 
-Contributors improving the bot should add features in the engine (e.g. image reading before `enviar_like`), not hardcode personal lists into `hinge_wda.py`. New filter *capabilities* belong in code + `prefs.example.yaml`; personal *values* stay in `prefs.local.yaml`.
+Contributors improving the bot should add features in the engine (e.g. image reading via `before_like`), not hardcode personal lists into `hinge_wda.py`. New filter *capabilities* belong in code + `prefs.example.yaml`; personal *values* stay in `prefs.local.yaml`.
+
+When releasing: bump `VERSION`, update `CHANGELOG.md`, tag `vX.Y.Z` (SemVer — see `.cursor/rules/versioning.mdc`). If prefs keys change, bump `prefs_schema` in `prefs.example.yaml`.
 
 ## Run
 
