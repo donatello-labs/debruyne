@@ -7,7 +7,7 @@ Hinge auto-sender via WebDriverAgent (USB). Prompts/replies live in the repo; **
 ## Quick start
 
 ```bash
-git clone https://github.com/cristofersalinas/DeBruyneCopilot.git
+git clone https://github.com/donatello-labs/DeBruyneCopilot.git
 cd DeBruyneCopilot
 pip3 install -r requirements.txt
 cp prefs.example.yaml prefs.local.yaml

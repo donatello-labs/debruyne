@@ -30,5 +30,5 @@ First public baseline of DeBruyneCopilot.
 - Deduplicated `hinge_wda.py`; prompts/replies stay in the public engine.
 - Runtime paths are relative to the project directory.
 
-[Unreleased]: https://github.com/cristofersalinas/DeBruyneCopilot/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/cristofersalinas/DeBruyneCopilot/releases/tag/v1.0.0
+[Unreleased]: https://github.com/donatello-labs/DeBruyneCopilot/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/donatello-labs/DeBruyneCopilot/releases/tag/v1.0.0
