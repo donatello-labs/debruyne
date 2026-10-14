@@ -1,4 +1,4 @@
-# DeBruyneCopilot
+# debruyne
 
 Hinge auto-sender via WebDriverAgent (USB). Prompts/replies live in the repo; **personal filter values stay on your machine**.
 
@@ -7,8 +7,8 @@ Hinge auto-sender via WebDriverAgent (USB). Prompts/replies live in the repo; **
 ## Quick start
 
 ```bash
-git clone https://github.com/donatello-labs/DeBruyneCopilot.git
-cd DeBruyneCopilot
+git clone https://github.com/donatello-labs/debruyne.git
+cd debruyne
 pip3 install -r requirements.txt
 cp prefs.example.yaml prefs.local.yaml
 ```

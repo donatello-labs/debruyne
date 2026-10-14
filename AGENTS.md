@@ -1,4 +1,4 @@
-# Agent guide — DeBruyneCopilot
+# Agent guide — debruyne
 
 Instructions for any AI helping someone set up or extend this project.
 

@@ -1,4 +1,4 @@
-# DeBruyneCopilot — filter preferences (PUBLIC EXAMPLE)
+# debruyne — filter preferences (PUBLIC EXAMPLE)
 # Copy to prefs.local.yaml and edit by hand — this format is meant for humans.
 # Section order matches the original filter layout (readability over cleverness).
 # Lists here are EXAMPLES only (max 2 items). Toggle sections with *_activo flags.

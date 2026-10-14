@@ -15,7 +15,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.0.0] — 2026-10-14
 
-First public baseline of DeBruyneCopilot.
+First public baseline of debruyne.
 
 ### Added
 
@@ -30,5 +30,5 @@ First public baseline of DeBruyneCopilot.
 - Deduplicated `hinge_wda.py`; prompts/replies stay in the public engine.
 - Runtime paths are relative to the project directory.
 
-[Unreleased]: https://github.com/donatello-labs/DeBruyneCopilot/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/donatello-labs/DeBruyneCopilot/releases/tag/v1.0.0
+[Unreleased]: https://github.com/donatello-labs/debruyne/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/donatello-labs/debruyne/releases/tag/v1.0.0
