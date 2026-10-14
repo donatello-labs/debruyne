@@ -1,0 +1,13 @@
+{
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.terminal.activateEnvironment": false,
+  "workbench.sideBar.location": "left",
+  "workbench.activityBar.visible": true,
+  "explorer.sortOrder": "type",
+  "files.exclude": {
+    "**/.DS_Store": true
+  },
+  "files.associations": {
+    "*.py": "python"
+  }
+}

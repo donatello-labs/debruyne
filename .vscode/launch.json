@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Hinge WDA",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/hinge_wda.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Debug WDA",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/debug_wda.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Test Tap",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/test_tap.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

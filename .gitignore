@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Runtime / logs
+errores/
+wda_build.log
+*.log
+
+# Generated outputs
+instagram_matches.txt
+resumen_filtro.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE (keep launch configs, ignore local caches)
+.vscode/*.log
