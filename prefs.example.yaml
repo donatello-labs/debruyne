@@ -4,6 +4,9 @@
 # Lists here are EXAMPLES only (max 2 items). Toggle sections with *_activo flags.
 # Ask an AI to walk you through setup 1:1 (see AGENTS.md). Always available: "I'll edit from the code"
 
+# Bump when prefs keys are added/removed (document in CHANGELOG). Independent of app VERSION.
+prefs_schema: 1
+
 # ── Runtime ──────────────────────────────────────────────
 delay_entre_loops: 0.1
 max_loops: 1000   # 0 = unlimited

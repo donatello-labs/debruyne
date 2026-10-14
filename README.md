@@ -2,6 +2,8 @@
 
 Hinge auto-sender via WebDriverAgent (USB). Prompts/replies live in the repo; **personal filter values stay on your machine**.
 
+**Version:** see [`VERSION`](VERSION) · changes in [`CHANGELOG.md`](CHANGELOG.md) · [SemVer](https://semver.org/)
+
 ## Quick start
 
 ```bash
@@ -32,6 +34,8 @@ python3 hinge_wda.py
 ## Para contribuidores
 
 Añadir capacidades (visión, nuevos filtros como *features*, fiabilidad) en el motor. No subir listas personales — documentar claves nuevas en `prefs.example.yaml` con ≤2 ejemplos.
+
+Al soltar una versión: subir `VERSION`, anotar `CHANGELOG.md`, tag `vX.Y.Z` (MAJOR/MINOR/PATCH — ver `.cursor/rules/versioning.mdc`).
 
 **Runtime must stay code-only** (no cloud LLM / token APIs in the like loop). AI is for install/setup and development help only — see `.cursor/rules/` and [AGENTS.md](AGENTS.md).
 

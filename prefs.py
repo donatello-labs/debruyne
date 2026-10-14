@@ -21,6 +21,7 @@ EXAMPLE_PATH = ROOT / "prefs.example.yaml"
 
 # Stable order — matches prefs.example.yaml / original hinge filter layout
 KEY_ORDER = (
+    "prefs_schema",
     "delay_entre_loops",
     "max_loops",
     "filtro_vitals_activo",

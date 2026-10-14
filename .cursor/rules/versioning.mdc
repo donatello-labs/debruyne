@@ -1,0 +1,13 @@
+---
+description: Semantic Versioning and changelog discipline
+alwaysApply: true
+---
+
+# Versioning (SemVer)
+
+- Version lives in `VERSION` (and `version.py`). Bump it when releasing.
+- Update `CHANGELOG.md` under `[Unreleased]`, then move notes into `## [X.Y.Z]` on release.
+- **MAJOR** (x.0.0): breaking engine API or prefs keys removed without backward-compatible merge.
+- **MINOR** (0.x.0): new capabilities, new *optional* prefs keys, new hooks.
+- **PATCH** (0.0.x): bugfixes, docs, rules — no behavior contract change.
+- Tag releases as `vX.Y.Z` and push tags. Do not commit `prefs.local.yaml`.

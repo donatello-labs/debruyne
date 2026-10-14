@@ -23,6 +23,7 @@ from collections import defaultdict, Counter
 from pathlib import Path
 
 from prefs import load_prefs
+from version import __version__
 
 _ROOT = str(Path(__file__).resolve().parent)
 
@@ -1022,7 +1023,7 @@ def on_f9():
 
 def main():
     print("=" * 40)
-    print("  HINGE WDA AUTO-SENDER")
+    print(f"  HINGE WDA AUTO-SENDER  v{__version__}")
     print("=" * 40)
     print("  F8  →  Pausar / Reanudar")
     print("  F9  →  Salir")
