@@ -1,0 +1,74 @@
+# DeBruyneCopilot — filter preferences (PUBLIC EXAMPLE)
+# Copy to prefs.local.yaml and edit by hand — this format is meant for humans.
+# Section order matches the original filter layout (readability over cleverness).
+# Lists here are EXAMPLES only (max 2 items). Toggle sections with *_activo flags.
+# Ask an AI to walk you through setup 1:1 (see AGENTS.md). Always available: "I'll edit from the code"
+
+# ── Runtime ──────────────────────────────────────────────
+delay_entre_loops: 0.1
+max_loops: 1000   # 0 = unlimited
+
+# ── Global vitals gate ───────────────────────────────────
+filtro_vitals_activo: true
+requiere_verificado: false
+categorias_op: OR   # how allowlist categories combine: OR | AND
+
+# ── Job allowlist ────────────────────────────────────────
+# Keep profiles whose job matches any keyword (when enabled)
+cargo_aprueba_activo: false
+cargos_clave:
+  - engineer
+  - analyst
+cargo_op: OR
+
+# ── Job blocklist ────────────────────────────────────────
+# Skip profiles whose job matches any keyword (when enabled)
+bloqueo_cargo_activo: false
+bloqueo_cargo_and_activo: false   # also skip jobs containing " and "
+cargos_bloqueados:
+  - bartender
+  - cashier
+
+# ── Education allowlist ──────────────────────────────────
+estudios_activo: false
+estudios_clave:
+  - master
+  - phd
+estudios_op: OR
+
+# ── Languages allowlist ──────────────────────────────────
+idiomas_activo: false
+idiomas_clave:
+  - english
+  - ingles
+idiomas_op: OR
+
+# ── Location allowlist ───────────────────────────────────
+ubicacion_aprueba_activo: false
+ubicacion_ciudades_activo: false
+ubicacion_prestigio:
+  - stanford
+  - berkeley
+ubicacion_ciudades:
+  - san francisco
+  - palo alto
+ubicacion_op: OR
+
+# ── Orientation / identity skip ──────────────────────────
+# Skip profiles matching keywords or listed emojis (when enabled)
+filtro_orientacion_activo: false
+orientacion_bloqueada:
+  - example_keyword_a
+  - example_keyword_b
+emojis_bloqueados:
+  - "🌈"
+  - "⚧"
+descripciones_emoji:
+  - rainbow flag
+  - transgender flag
+
+# ── Prompt / answer keyword skip ─────────────────────────
+filtro_palabras_prompts_activo: false
+palabras_prompts_bloqueadas:
+  - spicy
+  - picante

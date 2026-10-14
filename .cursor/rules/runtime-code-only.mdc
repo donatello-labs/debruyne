@@ -1,0 +1,15 @@
+---
+description: Automation runs as pure code — no AI/tokens at execution time
+alwaysApply: true
+---
+
+# Runtime = full code, zero AI
+
+This bot must work **offline from any LLM** once installed.
+
+- Execution path (`python3 hinge_wda.py`, WDA, filters, replies) uses **only local code + `prefs.local.yaml`**.
+- Do **not** add runtime calls to OpenAI/Anthropic/Cursor APIs, embeddings, or paid token services for liking/filtering/messaging.
+- New capabilities (e.g. image checks) must be **deterministic libraries or local models the user opts into** — never a required cloud LLM in the hot loop.
+- AI/agents are allowed for **install, setup, and coding help only** — not for each profile at runtime.
+
+If a feature needs “intelligence”, implement it as code rules, heuristics, or an optional local dependency documented in README/`prefs.example.yaml`.

@@ -1,0 +1,15 @@
+---
+description: AI-guided install and filter setup (1:1), including Xcode/WDA
+alwaysApply: true
+---
+
+# Setup & install (AI allowed here)
+
+When the user is installing or configuring (not in the send-like loop):
+
+1. Follow [AGENTS.md](AGENTS.md): environment first (macOS, **Xcode**, Python, WebDriverAgent, Accessibility, iPhone USB), then filters.
+2. Ask **one topic at a time**. On **every** question include **"I'll edit from the code"** (exact English).
+3. Do not invent personal preferences; write answers into `prefs.local.yaml` only.
+4. Never require an API key for the bot to run after setup.
+
+After setup, remind: daily use is `python3 hinge_wda.py` — no tokens needed.

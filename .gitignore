@@ -10,6 +10,9 @@ wda_build.log
 instagram_matches.txt
 resumen_filtro.txt
 
+# Personal filter values (keep prefs.example.yaml in the repo)
+prefs.local.yaml
+
 # Python
 __pycache__/
 *.py[cod]

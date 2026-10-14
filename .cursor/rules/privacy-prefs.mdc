@@ -1,0 +1,13 @@
+---
+description: Keep personal filter values local; never commit secrets or match data
+alwaysApply: true
+---
+
+# Privacy
+
+- **Never commit** `prefs.local.yaml`, `errores/`, `instagram_matches.txt`, `resumen_filtro.txt`, or `*.log`.
+- Personal filter **values** live only in `prefs.local.yaml` (gitignored).
+- Keep prefs YAML **legible for humans**: section comments, stable original order, plain lists — not minified or “clever” structures.
+- Public repo may include **filter capabilities** + `prefs.example.yaml` with **max 2 example items per list**.
+- Prompts/replies in `hinge_wda.py` are intentional public product copy — do not move personal blocklists into that file.
+- Do not paste the user’s real keyword lists into chat replies, PRs, or commits.

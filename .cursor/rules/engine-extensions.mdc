@@ -1,0 +1,13 @@
+---
+description: How contributors extend the engine without coupling to personal prefs
+globs: hinge_wda.py,prefs.py,prefs.example.yaml,**/*.py
+alwaysApply: false
+---
+
+# Extending capabilities (contributors)
+
+- Add features in engine modules (`hinge_wda.py` or new `.py` files), not by hardcoding personal lists.
+- New filter **switches/keys**: document in `prefs.example.yaml` (≤2 examples) and load via `prefs.py`.
+- Prefer the `before_like(src)` hook (and similar seams) over rewriting the WDA boot path.
+- Keep runtime free of cloud LLM calls (see rule `runtime-code-only`).
+- Preserve F8 pause / F9 quit behavior unless the user asks to change it.
