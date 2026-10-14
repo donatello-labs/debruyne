@@ -35,7 +35,9 @@ python3 hinge_wda.py
 
 Añadir capacidades (visión, nuevos filtros como *features*, fiabilidad) en el motor. No subir listas personales — documentar claves nuevas en `prefs.example.yaml` con ≤2 ejemplos.
 
-Al soltar una versión: subir `VERSION`, anotar `CHANGELOG.md`, tag `vX.Y.Z` (MAJOR/MINOR/PATCH — ver `.cursor/rules/versioning.mdc`).
+Al soltar una versión: anotar `CHANGELOG.md`, luego Actions → **Release (needs your approval)** (tú apruebas el environment `release`). SemVer: `.cursor/rules/versioning.mdc`.
+
+**Tu aprobación:** PRs y releases pasan por ti — correos y señales en [APPROVALS.md](APPROVALS.md).
 
 **Runtime must stay code-only** (no cloud LLM / token APIs in the like loop). AI is for install/setup and development help only — see `.cursor/rules/` and [AGENTS.md](AGENTS.md).
 

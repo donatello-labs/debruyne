@@ -1,0 +1,66 @@
+# Publishes vX.Y.Z only after YOU approve the "release" environment.
+# Prerequisite: VERSION file and CHANGELOG ## [X.Y.Z] already on main.
+name: Release (needs your approval)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "SemVer without v (must match VERSION on main, e.g. 1.1.0)"
+        required: true
+        type: string
+      summary:
+        description: "Short release notes"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    name: Wait for owner approval
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - name: Approved
+        run: echo "Release ${{ inputs.version }} approved."
+
+  publish:
+    name: Tag and publish
+    needs: gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate VERSION + CHANGELOG on main
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          echo "$VERSION" | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$'
+          test "$(tr -d '[:space:]' < VERSION)" = "$VERSION"
+          grep -q "## \[${VERSION}\]" CHANGELOG.md
+
+      - name: Create tag and GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ inputs.version }}
+          SUMMARY: ${{ inputs.summary }}
+        run: |
+          if git rev-parse "v${VERSION}" >/dev/null 2>&1; then
+            echo "Tag v${VERSION} already exists"
+          else
+            git config user.name "Donatello"
+            git config user.email "donatello@users.noreply.github.com"
+            git tag -a "v${VERSION}" -m "v${VERSION}"
+            git push origin "v${VERSION}"
+          fi
+          if gh release view "v${VERSION}" >/dev/null 2>&1; then
+            echo "Release already exists"
+          else
+            gh release create "v${VERSION}" \
+              --title "v${VERSION}" \
+              --notes "$(printf '%s\n\nSee CHANGELOG.md for details.' "$SUMMARY")"
+          fi

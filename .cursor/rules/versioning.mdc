@@ -10,4 +10,5 @@ alwaysApply: true
 - **MAJOR** (x.0.0): breaking engine API or prefs keys removed without backward-compatible merge.
 - **MINOR** (0.x.0): new capabilities, new *optional* prefs keys, new hooks.
 - **PATCH** (0.0.x): bugfixes, docs, rules — no behavior contract change.
-- Tag releases as `vX.Y.Z` and push tags. Do not commit `prefs.local.yaml`.
+- Publish releases only via Actions workflow **Release (needs your approval)** (environment `release`). Do not commit `prefs.local.yaml`.
+- Owner signals: see `APPROVALS.md` (PR review + deployment approval emails).
